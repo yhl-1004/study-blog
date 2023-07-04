@@ -1,21 +1,33 @@
-import { useCallback, useMemo } from 'react'
+import { useCallback, useMemo , useRef , MouseEvent, FC} from 'react'
 
-export default function MenuList() {
-  const menus = useMemo<string[]>(() => ['20230411'], [])
+interface ChildProps {
+  callback: (menuName: string) => void;
+}
 
-  const menuClick = useCallback(() => {
-    alert('??')
-  }, [])
+const  MenuList : FC<ChildProps> = ({callback})  => {
+  const menus = useMemo<string[]>(() => ['internet work','http','browser','dns','domain','hosting'], [])
+
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+
+  const menuClick = (e : MouseEvent<HTMLButtonElement>) => {
+
+    let _menuName : string  = typeof(e.currentTarget.textContent)==='string'?e.currentTarget.textContent : ""
+
+    callback(_menuName)
+  }
 
   const menusEl = useMemo(
     () =>
-      menus.map((menu) => (
-        <button
-          className="ml-4 text-lg font-medium "
-          onClick={(e) => menuClick()}
-        >
-          {menu}
-        </button>
+      menus.map((menu,index) => (
+        <li>
+          <button
+            className="ml-4 text-lg font-medium "
+            onClick={menuClick}
+            key={index}
+          >
+            {menu}
+          </button>
+        </li>
       )),
     [menus]
   )
@@ -27,3 +39,5 @@ export default function MenuList() {
     </div>
   )
 }
+
+export default MenuList
