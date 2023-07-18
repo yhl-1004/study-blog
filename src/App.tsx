@@ -9,6 +9,9 @@ import Browser from './pages/frontEnd/Browser'
 import Dns from './pages/frontEnd/Dns'
 import Domain  from './pages/frontEnd/Domain'
 import Hosting from './pages/frontEnd/Hosting'
+import ArrowFC from './pages/frontEnd/javascript/ArrowFC'
+import ReactSt from './pages/frontEnd/react/ReactSt'
+import ReactState from './pages/frontEnd/react/ReactState'
 
 function App() {
   
@@ -36,6 +39,13 @@ function App() {
     }
     if(selectedComponent==="hosting"){
       return <Hosting></Hosting>
+    }
+    if(selectedComponent==="arrowFC"){
+      return <ArrowFC></ArrowFC>
+    }if(selectedComponent==="reactFC"){
+      return <ReactSt></ReactSt>
+    }if(selectedComponent==="reactState"){
+      return <ReactState></ReactState>
     }
   }
 

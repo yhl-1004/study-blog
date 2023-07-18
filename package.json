@@ -22,7 +22,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -45,5 +47,7 @@
   "devDependencies": {
     "prettier": "^2.8.7",
     "tailwindcss": "^3.3.1"
-  }
+  },
+  "homepage": "https://yhl-1004.github.io/study-blog/"
+
 }

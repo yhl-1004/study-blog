@@ -5,7 +5,7 @@ interface ChildProps {
 }
 
 const  MenuList : FC<ChildProps> = ({callback})  => {
-  const menus = useMemo<string[]>(() => ['internet work','http','browser','dns','domain','hosting'], [])
+  const menus = useMemo<string[]>(() => ['internet work','http','browser','dns','domain','hosting','arrowFC','reactFC','reactState'], [])
 
   const menuButtonRef = useRef<HTMLButtonElement>(null);
 
