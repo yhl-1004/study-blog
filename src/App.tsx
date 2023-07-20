@@ -12,6 +12,9 @@ import Hosting from './pages/frontEnd/Hosting'
 import ArrowFC from './pages/frontEnd/javascript/ArrowFC'
 import ReactSt from './pages/frontEnd/react/ReactSt'
 import ReactState from './pages/frontEnd/react/ReactState'
+import ReactMount from './pages/frontEnd/react/ReactMount'
+import DiffEffectMount from './pages/frontEnd/react/DiffEffectMount'
+import ReactHooks from './pages/frontEnd/react/ReactHooks'
 
 function App() {
   
@@ -46,7 +49,14 @@ function App() {
       return <ReactSt></ReactSt>
     }if(selectedComponent==="reactState"){
       return <ReactState></ReactState>
+    }if(selectedComponent==="reactMount"){
+      return <ReactMount></ReactMount>
+    }if(selectedComponent==="diffEffectMount"){
+      return <DiffEffectMount></DiffEffectMount>
+    }if(selectedComponent==="reactHooks"){
+      return <ReactHooks></ReactHooks>
     }
+    
   }
 
   

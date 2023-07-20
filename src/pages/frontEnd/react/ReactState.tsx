@@ -15,9 +15,18 @@ const Li = styled.li`
     background-color: blue;
 `;
 
+/*
 const A = styled.a`
     color: blue;
 `;
+*/
+
+const A = styled.a.attrs({
+    target: '_blank',
+    rel: 'noopener noreferrer',
+  })`
+    color: blue;
+  `;
 
 const ReactState  = () => {
     const browser = useMemo(() => (
@@ -33,7 +42,8 @@ const ReactState  = () => {
             </A>
         </Li>
         <Li>
-            생각해야 할것은 state를 호출하는 곳에서 관리하는게 좋으냐 . 처리하는곳에서 관리하는게 좋으냐. 
+            <A href="https://react-ko.dev/learn/thinking-in-react">react-ko.dev</A>
+            에서는 부모 또는 satae관리 컴퍼넌트를 별도로 구성하는것을 권장한다.
         </Li>
       </>
     ), [])
