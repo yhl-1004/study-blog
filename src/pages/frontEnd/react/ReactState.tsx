@@ -45,6 +45,9 @@ const ReactState  = () => {
             <A href="https://react-ko.dev/learn/thinking-in-react">react-ko.dev</A>
             에서는 부모 또는 satae관리 컴퍼넌트를 별도로 구성하는것을 권장한다.
         </Li>
+        <Li>
+            <A href="https://codepen.io/kamsyyongho/pen/gOQjVVo?editors=0010">state 사용 예시</A>
+        </Li>
       </>
     ), [])
 
